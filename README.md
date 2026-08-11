@@ -28,3 +28,5 @@ python -m http.server 8000
 - Folder：`/ (root)`
 
 保存后等待 Pages 构建完成即可。
+
+自定义域名使用 `wky.wang`，对应配置保存在根目录的 `CNAME` 文件中。
