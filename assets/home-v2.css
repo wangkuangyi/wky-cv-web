@@ -515,9 +515,22 @@
 @media (max-width: 800px) {
   .hero { padding: 20px 16px 24px; }
   .hero-top { display: block; }
-  .portrait-stage { min-height: 310px; }
-  .portrait-stage img { object-position: center center; }
-  .hero .portrait-stage h1 { font-size: 20vw; left: 14px; bottom: 12px; }
+  .portrait-stage {
+    height: 230px;
+    min-height: 0;
+    max-height: none;
+  }
+  .portrait-stage img { object-position: center 42%; }
+  .portrait-stage::after {
+    inset: 55% 0 0;
+    background: linear-gradient(transparent, rgba(12, 24, 30, .68));
+  }
+  .hero .portrait-stage h1 {
+    left: 14px;
+    bottom: 11px;
+    font-size: clamp(50px, 15vw, 64px);
+    line-height: .82;
+  }
   .hero-intro { margin-top: 18px; padding: 18px 0 0; }
   .factbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fact-recruit { grid-column: 1 / -1; }
