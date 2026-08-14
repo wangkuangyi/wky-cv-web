@@ -1,7 +1,145 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>网易实习 · 王匡义</title><link rel="stylesheet" href="../../assets/detail.css"></head>
-<body><header class="nav"><a href="../../index.html">← 返回首页</a><span>PROJECT 01 / NETEASE</span><a href="../../personal/index.html">个人展示 ↗</a></header>
-<main><section class="hero"><aside class="hero-meta"><span class="eyebrow">PRIMARY EXPERIENCE</span><dl><dt>组织</dt><dd>网易</dd><dt>角色</dt><dd>平台开发实习生</dd><dt>时间</dt><dd>2025.03—08 / 2026.05—至今</dd><dt>地点</dt><dd>杭州</dd></dl></aside><div class="hero-main"><span class="eyebrow">PLATFORM & AI APPLICATIONS</span><h1>网易实习</h1><p class="hero-summary">两段实习覆盖内部平台与 AI 应用开发。我参与 Text2SQL 从 Agent Demo 到 MCP Tool 的落地，也承担系统需求、Code Review Skill 与监控看板等工作。</p><div class="tags"><span>TEXT2SQL</span><span>AGENT</span><span>PLATFORM</span><span>OBSERVABILITY</span></div><div class="visual"><strong>BUILD → SHIP → IMPROVE</strong></div></div></section>
-<section class="content"><aside class="side-title"><small>01 / RESPONSIBILITY</small><h2>主要工作</h2></aside><div class="body"><h2>做一些能用、<br>也确实有用的东西。</h2><p>工作横跨 AI 应用、内部平台、研发效率与可观测性。详细项目背景、技术方案和结果数据将在下一轮继续补充。</p><div class="work-grid"><article class="work"><small>AI APPLICATION</small><h3>Text2SQL</h3><p>参与从多源知识检索 Agent Demo 到内部 MCP Tool 落地、维护与自动化评测的完整过程。</p></article><article class="work"><small>PLATFORM</small><h3>美术一体化系统</h3><p>参与内部系统维护与需求开发，支持实际业务流程。</p></article><article class="work"><small>CODE REVIEW</small><h3>Review Skill</h3><p>编写 Code Review Skill，并推动其进入实际研发流程。</p></article><article class="work"><small>OBSERVABILITY</small><h3>Grafana 看板</h3><p>搭建监控与数据可视化看板，帮助团队观察系统状态。</p></article></div><div class="result"><small>TEXT2SQL</small><p>核心项目已从前期 Agent Demo 演进为公司内部使用的 MCP Tool。</p></div></div></section>
-<nav class="next"><a href="../undergraduate/index.html"><span>上一篇</span><b>本科项目</b></a><a href="../embodied-agent/index.html"><span>下一篇</span><b>Embodied Agent →</b></a></nav></main><footer><h2>想继续了解？</h2><a href="mailto:kuangyi001126@outlook.com">kuangyi001126@outlook.com</a></footer></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="王匡义在网易的平台开发与 AI 应用开发经历，包括 Text2SQL、Agent Eval、Code Review、APM Platform 等工作。">
+  <title>网易实习 · 王匡义</title>
+  <link rel="stylesheet" href="../../assets/netease.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="../../index.html">← 返回首页</a>
+    <span>PROJECT 01 / NETEASE</span>
+    <a href="../../personal/index.html">个人展示 ↗</a>
+  </header>
+
+  <main>
+    <section class="career-hero" aria-labelledby="page-title">
+      <div class="hero-heading">
+        <span class="eyebrow">主要经历</span>
+        <h1 id="page-title">网易实习</h1>
+        <p>两段实习覆盖内部平台与 AI 应用开发。我参与 Text2SQL 从 Agent Demo 到内部 MCP Tool 的落地，也承担 Agent 测评、Code Review、系统需求与看板搭建等工作。</p>
+      </div>
+      <dl class="career-facts">
+        <div><dt>组织</dt><dd>网易</dd></div>
+        <div><dt>角色</dt><dd>平台开发实习生</dd></div>
+        <div><dt>时间</dt><dd>2025.03—08<br>2026.05—至今</dd></div>
+        <div><dt>地点</dt><dd>杭州</dd></div>
+      </dl>
+      <nav class="work-index" aria-label="网易工作目录">
+        <a href="#text2sql"><b>01</b><span>Text2SQL</span></a>
+        <a href="#agent-eval"><b>02</b><span>Agent Eval</span></a>
+        <a href="#code-review"><b>03</b><span>Code Review</span></a>
+        <a href="#apm-platform"><b>04</b><span>APM Platform</span></a>
+        <a href="#other"><b>05</b><span>Other</span></a>
+      </nav>
+    </section>
+
+    <section class="case case-feature" id="text2sql">
+      <header class="case-head">
+        <div><span class="case-no">01 / AI APPLICATION</span><h2>Text2SQL</h2></div>
+        <p class="case-lead">围绕速度、准确性与安全性，推动内部 Text2SQL 能力从前期 Agent Demo 演进为实际使用的 MCP Tool。</p>
+      </header>
+      <div class="case-layout">
+        <div class="case-copy">
+          <article><h3>模型切换与上线</h3><p>将 Stage 1 的选表、意图检测等模型由 Haiku 切换至 DeepSeek Flash，完成 A/B Test、灰度验证与上线落地。</p></article>
+          <article><h3>调用效果优化</h3><p>优化提示词设计与缓存命中效率，并新增渐进式披露接口，按知识域向 Agent 提供改写参考。</p></article>
+          <article><h3>权限与保密边界</h3><p>完善提示词内的权限约束与接口返回内容的保密控制，让工具在企业数据边界内稳定工作。</p></article>
+        </div>
+        <div class="trace-panel" aria-label="Text2SQL Agent 渐进查询示意">
+          <div class="trace-top"><span>QUERY TRACE</span><i></i><i></i><i></i></div>
+          <div class="trace-line user">用户：查询上月任务单</div>
+          <div class="trace-line tool"><span>01</span>选表与意图检测</div>
+          <div class="trace-line agent">请确认月份口径，默认为结算月。</div>
+          <div class="trace-line user">用户：结算月，查询</div>
+          <div class="trace-line tool"><span>02</span>权限校验与知识改写</div>
+          <div class="trace-line tool"><span>03</span>执行查询并安全返回</div>
+          <div class="trace-result"><small>DELIVERY</small><strong>Agent Demo → MCP Tool</strong><p>更快 · 更准 · 更安全</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case" id="agent-eval">
+      <header class="case-head">
+        <div><span class="case-no">02 / EVALUATION</span><h2>Agent Eval</h2></div>
+        <p class="case-lead">围绕日常即时检查与完整回归测试，搭建 Agent / MCP Tool 自动化测评框架。</p>
+      </header>
+      <div class="case-layout reverse">
+        <div class="eval-visual" aria-label="Agent 黑盒与白盒测评框架示意">
+          <div class="eval-input"><small>GROWING TEST SET</small><b>线上问题</b><b>人工样例</b><b>自动汇总</b></div>
+          <div class="eval-arrow">→</div>
+          <div class="eval-core"><small>AGENT / MCP TOOL</small><strong>Evaluation<br>Harness</strong><div><span>黑盒</span><span>白盒</span></div></div>
+          <div class="eval-arrow">→</div>
+          <div class="eval-output"><small>CHECK</small><b>调用轨迹</b><b>回答质量</b><b>回归结果</b></div>
+        </div>
+        <div class="case-copy">
+          <article><h3>两类测评入口</h3><p>Skill 用于日常提问后的即时检查；Claude Agent SDK 用于完整、无人工干预的自动化测评。</p></article>
+          <article><h3>增长式测试集</h3><p>通过人工与自动方式汇总线上问题，把真实失败案例持续沉淀为测试样例。</p></article>
+          <article><h3>更新前回归</h3><p>在版本更新前运行回归测试，观察工具调用过程与最终回答，减少能力迭代引入的退化。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case" id="code-review">
+      <header class="case-head">
+        <div><span class="case-no">03 / ENGINEERING EFFICIENCY</span><h2>Code Review</h2></div>
+        <p class="case-lead">把需求级代码审查沉淀成可复用的 Skill，覆盖 trunk 开发阶段与 release 合并阶段的不同风险。</p>
+      </header>
+      <div class="case-layout">
+        <div class="case-copy">
+          <article><h3>按需求聚合审查</h3><p>以 ref# 聚合同一需求的前后端提交，按技术栈分流，并让审查 Agent 自取 diff 与最终文件，控制主上下文规模。</p></article>
+          <article><h3>并行 Review</h3><p>预处理后按需求并行审查，统一输出严重、警告与建议三级结论；只报告能说明触发条件和后果的问题。</p></article>
+          <article><h3>Release 完整性核对</h3><p>补充合并完整性、同文件碰撞、缺文件和待合并版本干扰检查，覆盖“已合并但合得不完整”的风险。</p></article>
+        </div>
+        <div class="review-flow" aria-label="Code Review Skill 流程示意">
+          <div class="review-source"><small>SVN TRUNK</small><span>ref #A</span><span>ref #B</span><span>ref #C</span></div>
+          <div class="review-rail"><i></i><i></i><i></i></div>
+          <div class="review-agents">
+            <div><small>REVIEWER 01</small><b>Backend</b><span>最终状态</span></div>
+            <div><small>REVIEWER 02</small><b>Frontend</b><span>逐提交 diff</span></div>
+            <div><small>RELEASE CHECK</small><b>Merge</b><span>完整性核对</span></div>
+          </div>
+          <div class="review-report"><span>结构化报告</span><b>🔴 严重　🟡 警告　🟢 建议</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case" id="apm-platform">
+      <header class="case-head">
+        <div><span class="case-no">04 / PLATFORM</span><h2>APM Platform</h2></div>
+        <p class="case-lead">参与部门核心业务系统的持续开发，支持网易外包、外派及美术协作环节的整体管理。</p>
+      </header>
+      <div class="platform-layout">
+        <div class="platform-map" aria-label="APM Platform 业务流程示意">
+          <span>需求进入</span><i>→</i><span>流程协作</span><i>→</i><span>交付管理</span><i>→</i><span>数据观察</span>
+        </div>
+        <div class="case-copy compact">
+          <article><h3>业务需求开发</h3><p>面向实际业务流程完成新需求开发，把业务规则落实为可维护的系统能力。</p></article>
+          <article><h3>接口优化</h3><p>持续维护与优化既有接口，配合上下游使用场景改进平台体验。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case case-other" id="other">
+      <header class="case-head">
+        <div><span class="case-no">05 / OTHER WORK</span><h2>Other</h2></div>
+        <p class="case-lead">除核心项目外，也承担数据观察、分析验证与周边系统需求。</p>
+      </header>
+      <div class="other-grid">
+        <article><span>OBSERVABILITY</span><h3>Grafana 看板搭建</h3><p>组织关键指标与展示方式，帮助团队观察系统运行状态。</p></article>
+        <article><span>DATA</span><h3>业务宽表导出</h3><p>支持业务数据整理与导出需求，为后续分析提供可用数据。</p></article>
+        <article><span>RESEARCH</span><h3>有数 BI 调研</h3><p>围绕业务分析场景调研 BI 能力与可行的落地方式。</p></article>
+        <article><span>PLATFORM</span><h3>质量可视化系统</h3><p>参与质量数据可视化相关系统的需求开发。</p></article>
+      </div>
+    </section>
+
+    <nav class="next">
+      <a href="../../index.html#netease"><span>返回</span><b>全部项目</b></a>
+      <a href="../embodied-agent/index.html"><span>下一篇 · 02</span><b>Embodied Agent →</b></a>
+    </nav>
+  </main>
+
+  <footer><h2>想继续了解？</h2><a href="mailto:kuangyi001126@outlook.com">kuangyi001126@outlook.com</a></footer>
+</body>
+</html>

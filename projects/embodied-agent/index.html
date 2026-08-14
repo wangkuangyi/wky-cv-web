@@ -1,1 +1,58 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Embodied Agent · 王匡义</title><link rel="stylesheet" href="../../assets/detail.css"></head><body><header class="nav"><a href="../../index.html">← 返回首页</a><span>PROJECT 02 / EMBODIED AGENT</span><a href="../../personal/index.html">个人展示 ↗</a></header><main><section class="hero"><aside class="hero-meta"><span class="eyebrow">CURRENT RESEARCH</span><dl><dt>组织</dt><dd>NUS ACT Lab</dd><dt>角色</dt><dd>仿真、Memory 与评测</dd><dt>时间</dt><dd>2026.01—2026.05</dd><dt>状态</dt><dd>机器人期刊投稿中</dd></dl></aside><div class="hero-main"><span class="eyebrow">LANGUAGE TO LOCATION</span><h1>Embodied<br>Agent</h1><p class="hero-summary">系统扫描三维环境，接收自然语言指令，由 Agent 输出具体坐标点并完成导航。</p><div class="tags"><span>PROCTHOR</span><span>MEMORY</span><span>NAVIGATION</span><span>BENCHMARK</span></div><div class="visual"><strong>OBSERVE → REMEMBER → ACT</strong></div></div></section><section class="content"><aside class="side-title"><small>01 / RESPONSIBILITY</small><h2>具体工作</h2></aside><div class="body"><h2>让 Agent 能够操作环境，<br>也知道该记住什么。</h2><p>项目探索分层 Agent、工具调用和记忆管理如何共同支持长程机器人任务。</p><div class="work-grid"><article class="work"><small>SIMULATION</small><h3>ProcTHOR 环境</h3><p>负责整个系统的仿真部分搭建，为 Agent 提供控制环境的能力。</p></article><article class="work"><small>MEMORY</small><h3>记忆管理</h3><p>提供 Memory，并制定记忆更新与垃圾回收机制。</p></article><article class="work"><small>EVALUATION</small><h3>Middle-level Agent 评测</h3><p>围绕 Middle-level 机器人 Agent 系统搭建新的 benchmark，并提出对应评测标准。</p></article><article class="work"><small>SYSTEM</small><h3>交互链路</h3><p>连接环境扫描、自然语言理解、坐标输出与导航动作。</p></article></div><div class="result"><small>STATUS</small><p>项目正在投稿机器人期刊。</p></div></div></section><nav class="next"><a href="../text2sql/index.html"><span>上一篇</span><b>Text2SQL</b></a><a href="../generative-policy/index.html"><span>下一篇</span><b>Trajectory Editing →</b></a></nav></main><footer><h2>想继续了解？</h2><a href="mailto:kuangyi001126@outlook.com">kuangyi001126@outlook.com</a></footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="王匡义参与的 Embodied Agent 研究：ProcTHOR 仿真、记忆管理、导航链路与 Middle-level Agent 评测。">
+  <title>Embodied Agent · 王匡义</title>
+  <link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+  <header class="nav"><a href="../../index.html">← 返回首页</a><span>PROJECT 02 / EMBODIED AGENT</span><a href="../../personal/index.html">个人展示 ↗</a></header>
+  <main>
+    <section class="project-hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">CURRENT RESEARCH</span>
+          <h1>Embodied Agent</h1>
+          <p class="hero-summary">系统扫描三维环境，接收自然语言指令，由 Agent 输出具体坐标点并完成导航。</p>
+          <div class="tags"><span>PROCTHOR</span><span>MEMORY</span><span>NAVIGATION</span><span>BENCHMARK</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="room-system" aria-label="Embodied Agent 从环境扫描到导航执行的流程图">
+            <div class="room-pipeline"><span>01 环境扫描</span><span>02 指令理解</span><span>03 坐标输出</span><span>04 导航执行</span></div>
+            <svg class="floorplan" viewBox="0 0 360 190" role="img" aria-label="Agent 从卧室 A 经过门洞和走廊到达客厅 B">
+              <rect class="floor-shell" x="10" y="10" width="340" height="170"/>
+              <path class="floor-wall" d="M128 10V72 M128 98V180 M235 10V53 M235 79V180 M10 112H48 M72 112H128"/>
+              <path class="floor-door" d="M128 72A26 26 0 0 0 102 98 M235 53A26 26 0 0 0 209 79 M48 112A24 24 0 0 1 72 136"/>
+              <rect class="floor-object" x="25" y="132" width="57" height="30" rx="2"/>
+              <rect class="floor-object" x="274" y="28" width="44" height="34" rx="2"/>
+              <rect class="floor-object" x="148" y="26" width="58" height="14" rx="2"/>
+              <text class="floor-label" x="27" y="101">BEDROOM</text><text class="floor-label" x="158" y="94">HALL</text><text class="floor-label" x="278" y="98">LIVING</text>
+              <path class="agent-route" d="M54 147 C54 125 62 119 72 112 C84 98 103 88 128 85 L192 85 C216 85 218 66 235 66 L295 66 C316 66 318 88 318 112"/>
+              <circle class="route-point" cx="54" cy="147" r="11"/><text class="route-text" x="54" y="150">A</text>
+              <circle class="route-point" cx="318" cy="112" r="11"/><text class="route-text" x="318" y="115">B</text>
+            </svg>
+            <div class="room-caption"><span>INPUT / “去客厅桌边”</span><span>OUTPUT / (x, z)</span></div>
+          </div>
+        </div>
+      </div>
+      <dl class="hero-facts"><div><dt>组织</dt><dd>NUS ACT Lab</dd></div><div><dt>角色</dt><dd>仿真、Memory 与评测</dd></div><div><dt>时间</dt><dd>2026.01—2026.05</dd></div><div><dt>状态</dt><dd>机器人期刊投稿中</dd></div></dl>
+    </section>
+
+    <section class="detail-section">
+      <header class="section-head"><div><span class="section-no">01 / RESPONSIBILITY</span><h2>让 Agent 能够持续理解环境，知道该记住什么。</h2></div><p class="section-lead">围绕仿真环境、记忆与评测，连接从自然语言指令到具体导航动作的完整链路。</p></header>
+      <div class="work-grid">
+        <article class="work-card"><small>SIMULATION</small><h3>ProcTHOR 环境</h3><p>负责系统仿真部分搭建，为 Agent 提供理解与控制环境的能力。</p></article>
+        <article class="work-card"><small>MEMORY</small><h3>记忆管理</h3><p>提供 Memory，并制定记忆更新与垃圾回收机制。</p></article>
+        <article class="work-card"><small>EVALUATION</small><h3>Middle-level Agent 评测</h3><p>围绕 Middle-level 机器人 Agent 系统搭建新的 benchmark，并提出对应评测标准。</p></article>
+        <article class="work-card"><small>SYSTEM</small><h3>交互链路</h3><p>连接环境扫描、自然语言理解、坐标输出与导航动作。</p></article>
+      </div>
+      <div class="status-note"><small>STATUS</small><p>项目正在投稿机器人期刊。</p></div>
+    </section>
+
+    <nav class="next"><a href="../text2sql/index.html"><span>上一篇 · 01</span><b>网易实习</b></a><a href="../generative-policy/index.html"><span>下一篇 · 03</span><b>Trajectory Editing →</b></a></nav>
+  </main>
+  <footer><h2>想继续了解？</h2><a href="mailto:kuangyi001126@outlook.com">kuangyi001126@outlook.com</a></footer>
+</body>
+</html>

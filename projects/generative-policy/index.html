@@ -1,7 +1,50 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trajectory Editing · 王匡义</title><link rel="stylesheet" href="../../assets/detail.css"></head>
-<body><header class="nav"><a href="../../index.html">← 返回首页</a><span>PROJECT 03 / TRAJECTORY EDITING</span><a href="../../personal/index.html">个人展示 ↗</a></header>
-<main><section class="hero"><aside class="hero-meta"><span class="eyebrow">CURRENT RESEARCH</span><dl><dt>组织</dt><dd>NUS ACT Lab</dd><dt>角色</dt><dd>RoboMimic 相关实验</dd><dt>时间</dt><dd>2026</dd><dt>状态</dt><dd>NeurIPS 2026 在投</dd></dl></aside><div class="hero-main"><span class="eyebrow">OFFLINE REINFORCEMENT LEARNING</span><h1>Trajectory<br>Editing</h1><p class="hero-summary">BITE 将离线轨迹编辑建模为后验推断，在不与环境额外交互的前提下，修复轨迹中的空间断裂与关键阶段时间稀疏问题。</p><div class="tags"><span>OFFLINE RL</span><span>DIFFUSION</span><span>ROBOMIMIC</span><span>TRAJECTORY</span></div><div class="visual"><strong>EDIT → INFER → LEARN</strong></div></div></section>
-<section class="content"><aside class="side-title"><small>01 / METHOD & EXPERIMENT</small><h2>研究内容</h2></aside><div class="body"><h2>先修复离线轨迹，<br>再从数据中学习策略。</h2><p>方法以离线数据提供的轨迹先验约束可行性，并通过编辑条件形成似然，在二者的后验分布中生成满足要求的轨迹。</p><div class="work-grid"><article class="work"><small>METHOD</small><h3>BITE</h3><p>以 Bayesian Inference for Trajectory Editing 统一描述空间连接与时间加密两类轨迹编辑。</p></article><article class="work"><small>SPATIAL</small><h3>连接轨迹片段</h3><p>为存在空间断裂的行为片段推断可行的中间轨迹。</p></article><article class="work"><small>TEMPORAL</small><h3>加密关键阶段</h3><p>围绕接触、抓取和对齐等关键操作阶段补充中间转移。</p></article><article class="work"><small>MY ROLE</small><h3>RoboMimic 实验</h3><p>主要负责 RoboMimic 机器人操作任务相关实验与结果验证。</p></article></div><div class="result"><small>STATUS</small><p>论文 Trajectory Editing as Posterior Inference for Offline Reinforcement Learning 正在投稿 NeurIPS 2026。</p></div></div></section>
-<nav class="next"><a href="../embodied-agent/index.html"><span>上一篇</span><b>Embodied Agent</b></a><a href="../reasoning-chain/index.html"><span>下一篇</span><b>逐步表达链解数学题 →</b></a></nav></main><footer><h2>想继续了解？</h2><a href="mailto:kuangyi001126@outlook.com">kuangyi001126@outlook.com</a></footer></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BITE 轨迹编辑研究与王匡义负责的 RoboMimic 操作任务实验。">
+  <title>Trajectory Editing · 王匡义</title>
+  <link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+  <header class="nav"><a href="../../index.html">← 返回首页</a><span>PROJECT 03 / TRAJECTORY EDITING</span><a href="../../personal/index.html">个人展示 ↗</a></header>
+  <main>
+    <section class="project-hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">OFFLINE REINFORCEMENT LEARNING</span>
+          <h1>Trajectory Editing</h1>
+          <p class="hero-summary">BITE 将离线轨迹编辑建模为后验推断，在不与环境额外交互的前提下，修复轨迹中的空间断裂与关键阶段时间稀疏问题。</p>
+          <div class="tags"><span>OFFLINE RL</span><span>DIFFUSION</span><span>ROBOMIMIC</span><span>TRAJECTORY</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="trajectory-system" aria-label="RoboMimic 轨迹稀疏节点修复示意图">
+            <div class="trajectory-label"><span>ORIGINAL / SPARSE ACTIONS</span><span>ROBOMIMIC</span></div>
+            <div class="frames">
+              <i class="frame anchor" style="--arm:-42deg;--block-x:18%"></i><i class="frame generated" style="--arm:-28deg;--block-x:28%"></i><i class="frame generated" style="--arm:-12deg;--block-x:38%"></i><i class="frame generated" style="--arm:8deg;--block-x:48%"></i><i class="frame generated" style="--arm:25deg;--block-x:58%"></i><i class="frame anchor" style="--arm:40deg;--block-x:68%"></i>
+            </div>
+            <div class="trajectory-wave"><svg viewBox="0 0 500 75" preserveAspectRatio="none" aria-hidden="true"><path class="original" d="M0 55 C80 42 110 15 165 52 S280 17 340 53 S430 25 500 47"/><path class="edited" d="M0 55 C65 49 105 30 165 43 S270 29 340 45 S425 34 500 47"/></svg></div>
+            <div class="trajectory-result"><span>EDITED DATA</span><i>+</i><span>OFFLINE RL</span></div>
+          </div>
+        </div>
+      </div>
+      <dl class="hero-facts"><div><dt>组织</dt><dd>NUS ACT Lab</dd></div><div><dt>角色</dt><dd>RoboMimic 相关实验</dd></div><div><dt>时间</dt><dd>2026</dd></div><div><dt>状态</dt><dd>NeurIPS 2026 在投<br>Rebuttal 已完成</dd></div></dl>
+    </section>
+
+    <section class="detail-section">
+      <header class="section-head"><div><span class="section-no">01 / MY ROLE</span><h2>从稀疏演示到可用于训练的增量数据。</h2></div><p class="section-lead">我的主要工作集中在 RoboMimic 操作任务：拆解轨迹、选取关键锚点、生成中间动作，并验证编辑数据对 Offline RL 的作用。</p></header>
+      <div class="process-list">
+        <article class="process-step"><h3>分割机器人轨迹</h3><p>按照操作阶段拆分演示轨迹，定位能够调整执行节奏、适合进行时间编辑的片段。</p></article>
+        <article class="process-step"><h3>提取少量锚点</h3><p>在可加速片段中保留少数关键状态作为约束，让起点、终点与关键操作阶段保持一致。</p></article>
+        <article class="process-step"><h3>生成式轨迹修补</h3><p>使用 BITE 的生成式后验推断补全锚点之间的状态与动作，得到更密集且符合数据分布的轨迹。</p></article>
+        <article class="process-step"><h3>增量训练与验证</h3><p>将编辑后的演示加入原始数据集，训练多种 Offline RL 方法并比较策略表现。</p></article>
+      </div>
+      <div class="status-note"><small>METHOD & STATUS</small><p>BITE 统一处理空间连接与时间加密；论文正在投稿 NeurIPS 2026，Rebuttal 已完成。</p></div>
+    </section>
+
+    <nav class="next"><a href="../embodied-agent/index.html"><span>上一篇 · 02</span><b>Embodied Agent</b></a><a href="../reasoning-chain/index.html"><span>下一篇 · 04</span><b>逐步表达链解数学题 →</b></a></nav>
+  </main>
+  <footer><h2>想继续了解？</h2><a href="mailto:kuangyi001126@outlook.com">kuangyi001126@outlook.com</a></footer>
+</body>
+</html>
