@@ -45,6 +45,20 @@
       agentTimers.push(setTimeout(runAgentTrace,350+agentLines.length*900+3000));
     }
     runAgentTrace();reducedMotion.addEventListener('change',runAgentTrace);
+    const portfolioReturnKey='wky-portfolio-return',portfolioRestoreKey='wky-portfolio-restore';
+    function savePortfolioPosition(){try{sessionStorage.setItem(portfolioReturnKey,JSON.stringify({path:location.pathname,y:scrollY,savedAt:Date.now()}))}catch{}}
+    document.querySelectorAll('a[href^="projects/"]').forEach(link=>link.addEventListener('click',savePortfolioPosition));
+    function restorePortfolioPosition(){
+      try{
+        if(sessionStorage.getItem(portfolioRestoreKey)!=='1')return;
+        sessionStorage.removeItem(portfolioRestoreKey);
+        const saved=JSON.parse(sessionStorage.getItem(portfolioReturnKey)||'null');sessionStorage.removeItem(portfolioReturnKey);
+        if(!saved||saved.path!==location.pathname||Date.now()-saved.savedAt>=6*60*60*1000)return;
+        const root=document.documentElement,previous=root.style.scrollBehavior;root.style.scrollBehavior='auto';
+        requestAnimationFrame(()=>requestAnimationFrame(()=>{scrollTo(0,Math.min(saved.y,Math.max(0,root.scrollHeight-innerHeight)));root.style.scrollBehavior=previous}));
+      }catch{}
+    }
+    addEventListener('pageshow',restorePortfolioPosition);
     const contactModal=document.querySelector('.contact-modal'),contactOpen=document.querySelector('[data-contact-open]'),contactClose=document.querySelector('.contact-close');
     function setContact(open){contactModal.classList.toggle('show',open);document.body.style.overflow=open?'hidden':'';if(open)contactClose.focus();else contactOpen.focus()}
     contactOpen.addEventListener('click',()=>setContact(true));contactClose.addEventListener('click',()=>setContact(false));contactModal.addEventListener('click',event=>{if(event.target===contactModal)setContact(false)});document.addEventListener('keydown',event=>{if(event.key==='Escape'&&contactModal.classList.contains('show'))setContact(false)});
