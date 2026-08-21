@@ -8,6 +8,17 @@
   cursor: pointer;
 }
 
+.nav nav {
+  align-items: center;
+}
+
+.nav nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  line-height: 1;
+}
+
 .hero {
   padding-top: 28px;
 }
