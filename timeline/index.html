@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="王匡义的项目与经历时间线。">
+  <title>TimeLine · 王匡义</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/layout.css">
+  <link rel="stylesheet" href="../assets/timeline.css">
+</head>
+<body>
+  <header class="timeline-nav">
+    <a class="brand" href="../index.html">WKY / 个人页</a>
+    <a class="current" href="#timeline">TimeLine</a>
+    <span>点击项目进入详情</span>
+  </header>
+
+  <main class="timeline-page" id="timeline" data-timeline>
+    <div class="timeline-track" aria-hidden="true"><i data-progress></i></div>
+    <div class="continuity-link" data-continuity aria-hidden="true"><span>同一项目 · 二次迭代</span></div>
+    <div class="start-mark" aria-hidden="true"><span>2019</span><i></i></div>
+
+    <article class="moment side-left reveal" style="--accent:#a7772c">
+      <a class="node" href="../projects/undergraduate/index.html" aria-label="打开本科项目详情"><b>01</b></a>
+      <a class="event" href="../projects/undergraduate/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2019—2023</time><span>浙江大学</span></div>
+          <h2>本科项目</h2>
+          <p>从搜索、数据库到可视化，完成多个软件工程系统实践。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-foundation" aria-label="软件工程项目模块示意">
+          <span>JAVA</span><span>PY</span><span>SQL</span><span>WEB</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="moment side-right reveal" style="--accent:#ba3d2c">
+      <a class="node" href="../projects/reasoning-chain/index.html" aria-label="打开逐步表达链详情"><b>02</b></a>
+      <a class="event" href="../projects/reasoning-chain/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2022.07—2024.05</time><span>ZJU DCD Lab</span></div>
+          <h2>逐步表达链</h2>
+          <p>以子表达式为生成单元，逐步构建数学推理链。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-reason" aria-label="逐步表达链示意">
+          <span>2 + 5</span><i>→</i><span>× 8</span><i>→</i><span>− 3</span><b>= 53</b>
+        </div>
+      </a>
+    </article>
+
+    <article class="moment side-left reveal" style="--accent:#35606d">
+      <a class="node" href="../projects/tplink/index.html" aria-label="打开 TP-LINK 经历详情"><b>03</b></a>
+      <a class="event" href="../projects/tplink/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2023.07—2024.05</time><span>TP-LINK</span></div>
+          <h2>软件工程师</h2>
+          <p>多型号云端调试、功能迁移与无线漫游开发。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-router" aria-label="设备与云端连接示意">
+          <div class="signal"><i></i><i></i><i></i></div>
+          <div class="router"><i></i><i></i><i></i><i></i></div>
+          <small>DEVICE ↔ CLOUD</small>
+        </div>
+      </a>
+    </article>
+
+    <article class="moment side-right reveal" data-project="text2sql" style="--accent:#e4cc72">
+      <a class="node" href="../projects/text2sql/index.html" aria-label="打开 Text2SQL Demo 详情"><b>04</b></a>
+      <a class="event" href="../projects/text2sql/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2025.03—08</time><span>网易</span></div>
+          <h2>Text2SQL Demo</h2>
+          <p>独立完成前期 Demo，搭建多源检索、工具调用与自我纠错链路。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-query" aria-label="Text2SQL 查询流程示意">
+          <span class="user">查询上月任务单</span>
+          <span class="tool">KNOWLEDGE → QUERY</span>
+          <span class="result">SQL ✓ <i></i></span>
+        </div>
+      </a>
+    </article>
+
+    <article class="moment side-left reveal" style="--accent:#68808b">
+      <a class="node" href="../projects/post-training/index.html" aria-label="打开大模型后训练详情"><b>05</b></a>
+      <a class="event" href="../projects/post-training/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2025.11—2026.04</time><span>ZJU CAD Lab</span></div>
+          <h2>大模型后训练</h2>
+          <p>基于 VERL 与 DAPO，提升工业异常检测的识别与推理能力。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-dapo" aria-label="DAPO 强化学习闭环">
+          <strong>DAPO</strong><span>PROMPT</span><span>ROLLOUT</span><span>REWARD</span><span>UPDATE</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="moment side-right reveal" style="--accent:#ba3d2c">
+      <a class="node" href="../projects/embodied-agent/index.html" aria-label="打开 Embodied Agent 详情"><b>06</b></a>
+      <a class="event" href="../projects/embodied-agent/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2026.01—2026.05</time><span>NUS ACT Lab</span></div>
+          <h2>Embodied Agent</h2>
+          <p>连接环境感知、记忆、工具调用与导航执行。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-room" aria-label="Embodied Agent 室内导航示意">
+          <svg viewBox="0 0 190 120" role="img">
+            <path class="walls" d="M5 5H185V115H5ZM73 5V43M73 68V115M125 5V34M125 57V115M5 73H35M56 73H73"/>
+            <path class="route" d="M30 92C35 68 55 56 73 56H105C117 56 116 46 125 46H160C171 46 173 58 171 76"/>
+            <circle cx="30" cy="92" r="7"/><circle cx="171" cy="76" r="7"/>
+            <text x="30" y="95">A</text><text x="171" y="79">B</text>
+          </svg>
+        </div>
+      </a>
+    </article>
+
+    <article class="moment side-left reveal" style="--accent:#a7772c">
+      <a class="node" href="../projects/generative-policy/index.html" aria-label="打开生成式策略与轨迹编辑详情"><b>07</b></a>
+      <a class="event" href="../projects/generative-policy/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2026.03—至今</time><span>NUS ACT Lab</span></div>
+          <h2>生成式策略与轨迹编辑</h2>
+          <p>用轨迹编辑与数据增强改善机器人策略学习。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-trajectory" aria-label="机器人轨迹编辑前后对比">
+          <svg viewBox="0 0 190 105" role="img">
+            <path class="before" d="M8 85C32 30 48 92 72 48S106 18 121 66S155 92 182 20"/>
+            <path class="after" d="M8 85C43 71 59 55 83 48S130 49 182 20"/>
+            <circle cx="8" cy="85" r="4"/><circle cx="182" cy="20" r="4"/>
+          </svg>
+          <span>BEFORE</span><b>EDITED</b>
+        </div>
+      </a>
+    </article>
+
+    <article class="moment side-right reveal main-event" data-project="text2sql" style="--accent:#e4cc72">
+      <a class="node" href="../projects/text2sql/index.html" aria-label="打开 Text2SQL MCP Tool 详情"><b>08</b></a>
+      <a class="event" href="../projects/text2sql/index.html">
+        <div class="event-copy">
+          <div class="meta"><time>2026.05—至今</time><span>网易</span></div>
+          <h2>Text2SQL · MCP Tool</h2>
+          <p>完成 MCP Tool 落地，并持续进行新需求扩展与测评框架搭建。</p>
+          <em>查看详情 ↗</em>
+        </div>
+        <div class="visual visual-delivery" aria-label="Text2SQL 从 Demo 落地为 MCP Tool，并扩展新需求与搭建测评框架">
+          <div class="delivery-flow"><span>DEMO</span><i>→</i><strong>MCP TOOL</strong></div>
+          <div class="delivery-work"><span>新需求扩展</span><b>+</b><span>测评框架搭建</span></div>
+        </div>
+      </a>
+    </article>
+
+    <div class="end-mark reveal"><i></i><span>NOW</span></div>
+  </main>
+
+  <script src="../assets/timeline.js"></script>
+</body>
+</html>

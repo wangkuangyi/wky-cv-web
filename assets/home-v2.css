@@ -513,6 +513,21 @@
 .contact-item a { text-underline-offset: 5px; }
 
 @media (max-width: 800px) {
+  .nav nav {
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+
+  .nav nav a:not(.nav-timeline) { display: none; }
+
+  .nav-timeline {
+    padding: 7px 11px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+  }
+
+  .nav-contact { margin-left: 10px; }
+
   .hero { padding: 20px 16px 24px; }
   .hero-top { display: block; }
   .portrait-stage {
