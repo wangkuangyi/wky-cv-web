@@ -17,6 +17,8 @@ python -m http.server 8000
 - `index.html`：作品集首页
 - `timeline/`：纵向可视化履历，用于面试自我介绍
 - `projects/`：项目详情页
+- `projects/netease/`：网易实习，涵盖 Text2SQL、Agent Eval、Code Review、APM Platform 等工作
+- `projects/text2sql/`：旧网址兼容入口，自动跳转至 `projects/netease/`；启用 JavaScript 时保留查询参数与章节锚点
 - `personal/`：摄影与个人记录
 - `assets/`：共享样式
 
