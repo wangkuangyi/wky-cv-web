@@ -33,3 +33,17 @@ python -m http.server 8000
 保存后等待 Pages 构建完成即可。
 
 自定义域名使用 `wky.wang`，对应配置保存在根目录的 `CNAME` 文件中。
+
+## 网站图标
+
+全站使用深蓝底、米白 W 字母图标。`favicon.svg` 用于支持 SVG 的浏览器，
+`favicon.ico` 和 16/32 像素 PNG 用作兼容图标，`apple-touch-icon.png` 用于手机主屏幕收藏。
+大尺寸预览位于 `assets/wky-icon.png`。所有页面使用相对路径，支持本地预览和 GitHub Pages 子目录。
+
+如需调整图形或配色，修改 `scripts/build-favicons.py` 后重新生成（需要 Pillow）：
+
+```powershell
+python scripts/build-favicons.py
+```
+
+更新图标后，同时更新各页面图标链接的 `v` 参数，帮助浏览器刷新缓存。
